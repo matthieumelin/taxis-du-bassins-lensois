@@ -1,0 +1,26 @@
+.section_contact {
+    margin: 50px auto;
+    width: 90%;
+}
+
+.form_contact {
+    width: 88%;
+}
+
+.form_group {
+    margin: 20px 0;
+}
+
+.form_input {
+    padding: 20px;
+    border: 1px solid #C4C4C4;
+    border-radius: 2px;
+    width: 100%;
+    outline: none;
+}
+
+@media screen and (min-width: 950px) {
+    .section_contact {
+        width: 30%;
+    }
+}

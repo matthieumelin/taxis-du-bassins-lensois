@@ -1,0 +1,159 @@
+        /* navbar */
+        
+        .navbar {
+            box-shadow: 10px 10px 60px rgb(0 0 0 / 7%);
+            width: 100%;
+            z-index: 3;
+        }
+        
+        .navbar .button_submit {
+            max-width: 200px;
+            margin: 0 auto 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.2s;
+            box-shadow: 10px 10px 60px rgb(0 0 0 / 7%);
+        }
+        
+        .navbar .button_submit:hover {
+            transition: 0.2s;
+            background-color: #547429;
+            box-shadow: 10px 10px 60px rgb(0 0 0 / 20%);
+        }
+        
+        .navbar .navbar_links {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            overflow: hidden;
+        }
+        
+        .navbar .navbar_item .navbar_link {
+            display: block;
+            padding: 20px;
+            text-decoration: none;
+            text-align: center;
+            transition: 0.2s;
+            color: #fff;
+        }
+        
+        .navbar .navbar_item .navbar_link:hover,
+        .navbar .navbar_toggle:hover {
+            transition: 0.2s;
+        }
+        
+        .navbar .navbar_logo {
+            display: block;
+            float: left;
+            color: #80A142;
+            font-size: 1.3em;
+            padding: 13px 20px;
+            text-decoration: none;
+        }
+        /* navbar_links */
+        
+        .navbar .navbar_links {
+            clear: both;
+            max-height: 0;
+            transition: max-height .2s ease-out;
+        }
+        /* navbar_links icon */
+        
+        .navbar .navbar_label {
+            cursor: pointer;
+            display: inline-block;
+            float: right;
+            padding: 28px 20px;
+            position: relative;
+            user-select: none;
+        }
+        
+        .navbar .navbar_label .navicon {
+            background: #80A142;
+            display: block;
+            height: 2px;
+            position: relative;
+            transition: background .2s ease-out;
+            width: 18px;
+        }
+        
+        .navbar .navbar_label .navicon:before,
+        .navbar .navbar_label .navicon:after {
+            background: #80A142;
+            content: '';
+            display: block;
+            height: 100%;
+            position: absolute;
+            transition: all .2s ease-out;
+            width: 100%;
+        }
+        
+        .navbar .navbar_label .navicon:before {
+            top: 5px;
+        }
+        
+        .navbar .navbar_label .navicon:after {
+            top: -5px;
+        }
+        
+        .navbar .navbar_icon {
+            margin-right: 5px;
+        }
+        /* navbar_links btn */
+        
+        .navbar .navbar_toggle {
+            display: none;
+        }
+        
+        .navbar .navbar_toggle:checked~.navbar_links {
+            max-height: 100%;
+        }
+        
+        .navbar .navbar_toggle:checked~.navbar_label .navicon {
+            background: transparent;
+        }
+        
+        .navbar .navbar_toggle:checked~.navbar_label .navicon:before {
+            transform: rotate(-45deg);
+        }
+        
+        .navbar .navbar_toggle:checked~.navbar_label .navicon:after {
+            transform: rotate(45deg);
+        }
+        
+        .navbar .navbar_toggle:checked~.navbar_label:not(.steps) .navicon:before,
+        .navbar .navbar_toggle:checked~.navbar_label:not(.steps) .navicon:after {
+            top: 0;
+        }
+        
+        @media (min-width: 1130px) {
+            .navbar .navbar_logo {
+                padding: 15px 20px;
+            }
+            .navbar .button_submit {
+                margin: 10px;
+                font-size: initial;
+            }
+            .navbar .navbar_right {
+                margin-left: auto;
+            }
+            .navbar .navbar_item {
+                float: left;
+            }
+            .navbar .navbar_item .navbar_link {
+                padding: 20px 30px 10px;
+                font-size: 18px;
+            }
+            .navbar .navbar_links {
+                clear: none;
+                max-height: none;
+            }
+            .navbar .navbar_label {
+                display: none;
+            }
+            .navbar_right {
+                display: flex;
+                justify-content: flex-end;
+            }
+        }

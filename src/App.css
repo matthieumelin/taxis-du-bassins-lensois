@@ -1,0 +1,21 @@
+.button {
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    box-shadow: 10px 10px 60px rgb(0 0 0 / 7%);
+    border: none;
+    outline: none;
+}
+
+.button_submit {
+    background-color: #597C2B;
+}
+
+.modal_title {
+    color: #fff;
+}
+
+.modal_description {
+    color: #fff;
+}

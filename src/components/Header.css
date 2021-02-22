@@ -1,0 +1,33 @@
+.header {
+    background-image: url('../images/header_background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    max-height: 100%;
+}
+
+.header_content {
+    padding: 50px 20px;
+}
+
+.header_title {
+    margin: 0;
+    color: #fff;
+}
+
+.header_description {
+    margin: 0;
+    color: #fff;
+}
+
+@media screen and (min-width: 950px) {
+    .header_content {
+        padding: 100px;
+    }
+    .header_title {
+        font-size: 2.5rem;
+    }
+    .header_description {
+        font-size: 1.5rem;
+    }
+}
