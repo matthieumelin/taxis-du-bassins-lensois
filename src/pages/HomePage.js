@@ -1,7 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCarAlt, faClock, faShare, faShieldAlt, faRoad, faPhone, faClipboard } from '@fortawesome/free-solid-svg-icons';
+import { faCarAlt, faClock, faShare, faShieldAlt, faRoad, faPhone, faClipboard, faSmile, faChild, faBolt, faTint } from '@fortawesome/free-solid-svg-icons';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -38,6 +39,11 @@ export default function HomePage() {
                         <div className="how_title">En route</div>
                         <p className="how_description">On vous emmène à destination.</p>
                     </div>
+                    <div className="how">
+                        <FontAwesomeIcon icon={faSmile} className="how_icon" />
+                        <div className="how_title">Donnez nous votre avis</div>
+                        <p className="how_description">Car votre avis compte énormément pour nous <br /> <a href="https://www.google.com/maps/@49.9630988,2.8176678,8z" target="_blank" className="services_board_link">laisser un avis</a>.</p>
+                    </div>
                 </div>
             </section>
 
@@ -66,6 +72,33 @@ export default function HomePage() {
                         <FontAwesomeIcon icon={faShieldAlt} className="why_us_icon" />
                         <div className="why_us_title">Sécurité</div>
                         <p className="why_us_description">Chauffeurs diplômés et expérimentés</p>
+                    </div>
+                </div>
+            </section>
+
+            <section className="section section_services_board">
+                <div className="section_header">
+                    <h1 className="section_header_title">Services à bord</h1>
+                    <p className="section_header_description">
+                        Notre compagnie de transport met à votre disposition une large gamme de véhicules haut-de-gamme pouvant accueillir de 1 à 7 passagers.
+                        Nos véhicules ont également un coffre spacieux pour prendre l’ensemble de vos bagages et effets personnels.
+                        Vous bénéficierez du meilleur service avec un tarif conventionné. 
+                        Nos véhicules sont également récents, bien entretenus, régulièrement contrôlés et avec un habitacle toujours propre et nettoyé. 
+                        Nous prenons toutes les mesures possibles pour que vous arriviez à destination sans aucun aléa.</p>
+                </div>
+
+                <div className="section_content">
+                    <div className="services_board">
+                        <FontAwesomeIcon icon={faTint} className="services_board_icon" />
+                        <div className="services_board_title">Eau</div>
+                    </div>
+                    <div className="services_board">
+                        <FontAwesomeIcon icon={faBolt} className="services_board_icon" />
+                        <div className="services_board_title">Chargeurs</div>
+                    </div>
+                    <div className="services_board">
+                        <FontAwesomeIcon icon={faChild} className="services_board_icon" />
+                        <div className="services_board_title">Siège enfants</div>
                     </div>
                 </div>
             </section>

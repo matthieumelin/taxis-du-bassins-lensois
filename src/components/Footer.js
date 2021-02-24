@@ -10,7 +10,7 @@ export default function Footer() {
     return (
         <footer className="footer">
             <div className="footer_content">
-                <p className="footer_copyright">2019 - 2021 Taxi du bassin lensois - Tous droits réservés</p>
+                <p className="footer_copyright">2019 - 2021 Taxi du bassin Lensois - Tous droits réservés</p>
                 <ul className="footer_menu">
                     <li className="footer_item">
                         <Link to="/faq" className="footer_link"><FontAwesomeIcon icon={faQuestion} className="footer_icon" /> F.A.Q</Link>
@@ -22,7 +22,6 @@ export default function Footer() {
                         <Link to="/legal" className="footer_link"><FontAwesomeIcon icon={faFacebook} className="footer_icon" /></Link>
                     </li>
                 </ul>
-
             </div>
         </footer>
     )

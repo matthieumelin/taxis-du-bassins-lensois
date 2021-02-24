@@ -18,94 +18,9 @@
     text-align: center;
 }
 
-
-/* Services section */
-
-.section_services {
-    padding: 20px;
-    margin: 50px 0;
-}
-
-.section_services .section_header_title {
-    margin: 0;
-}
-
-.section_services .section_content {
-    margin: 0 auto;
-    width: 90%;
-}
-
-.service_title {
-    text-align: center;
-}
-
-.service {
-    margin-top: 100px;
-}
-
-.service_images .service_image {
-    margin: 10px auto;
-    display: block;
-    transition: 0.2s;
-    max-width: 200px;
-}
-
-.service_image {
-    max-width: 300px;
-    border-radius: 2px;
-    display: block;
-    margin: 10px auto;
-    transition: 0.2s;
-    width: 130px;
-    height: 100px;
-}
-
-.service_images {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    justify-content: center;
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-.service_text {
-    text-align: center;
-}
-
-.service_link {
-    color: #80A142;
-    text-decoration: none;
-}
-
-@media screen and (min-width: 500px) {
-    .service_images .service_image {
-        height: 150px;
-        width: 200px;
-        transition: 0.2s;
-    }
-}
-
 @media screen and (min-width: 950px) {
     .section_presentation .section_content {
         margin: 0 auto;
         width: 50%;
-    }
-    .section_services .section_content {
-        margin: 0 auto;
-        width: 50%;
-    }
-    .service_images {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    .service_images .service_image {
-        margin: 10px;
-        transition: 0.2s;
-    }
-    .service_image {
-        display: block;
-        margin: 0 auto;
-        width: 50%;
-        height: 50%;
     }
 }

@@ -18,11 +18,6 @@
     width: 90%;
 }
 
-.mapboxgl-ctrl-logo,
-.mapboxgl-ctrl-attrib-inner {
-    display: none !important;
-}
-
 .reservation {
     box-shadow: 10px 10px 60px rgb(0 0 0 / 20%);
 }
@@ -103,6 +98,7 @@
 
 .reservation_form_inline {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-around;
     width: 100%;
@@ -122,14 +118,14 @@
     outline: none;
 }
 
-.reservation_passengers {
+.reservation_plus_minus {
     border: 1px solid #A7A7A7;
     border-radius: 20px;
     display: flex;
     align-items: center;
 }
 
-.reservation_passengers_input {
+.reservation_plus_minus_input {
     width: 45px;
     border-radius: 0px !important;
     text-align: center;
@@ -138,12 +134,12 @@
     background-color: transparent;
 }
 
-.reservation_passengers_input:disabled {
+.reservation_plus_minus_input:disabled {
     color: #000;
 }
 
 .reservation_label {
-    margin: 10px;
+    margin: 10px 0;
 }
 
 .reservation_form_group .button_submit {
@@ -161,12 +157,12 @@
     box-shadow: 10px 10px 60px rgb(0 0 0 / 20%);
 }
 
-.reservation_passengers_icon {
+.reservation_plus_minus_icon {
     color: #A7A7A7;
 }
 
 .reservation_result {
-    padding: 20px 50px 30px;
+    padding: 20px 30px;
     border: 2px solid #CDD9DB;
     border-radius: 2px;
     background-color: #fff;
@@ -192,7 +188,7 @@
     width: 100%;
 }
 
-.button_passengers {
+.button_plus_minus {
     border: none;
     border-radius: 5px;
     padding: 5px 10px;
@@ -207,8 +203,20 @@
 
 .mapboxgl-ctrl-geocoder--input {
     outline: none !important;
+    z-index: 30 !important;
+}
+
+.mapboxgl-ctrl-logo,
+.mapboxgl-ctrl-attrib-inner {
+    display: none !important;
 }
 
 .react-datetime-picker {
     border: none !important;
+}
+
+@media screen and (min-width: 950px) {
+    .reservation_form_inline {
+        flex-direction: row;
+    }
 }

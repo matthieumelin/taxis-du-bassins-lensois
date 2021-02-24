@@ -48,3 +48,7 @@
     color: #80A142;
     margin-right: 5px;
 }
+
+.footer_icon:hover {
+    color: #92b84b;
+}
