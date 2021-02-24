@@ -19,7 +19,7 @@ export default function App() {
         <Route path='/faq' component={FaqPage} />
         <Route path='/contact' component={ContactPage} />
         <Route path='/legal' component={LegalPage} />
-        <Route path='/services' component={ServicesPage} />
+        <Route path='/services/:type' component={ServicesPage} />
 
         <Redirect to='/' />
       </Switch>

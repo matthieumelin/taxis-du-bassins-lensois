@@ -49,6 +49,12 @@
     margin-right: 5px;
 }
 
-.footer_icon:hover {
+.footer_right .footer_icon {
+    color: #80A142;
+    transition: 0.2s;
+}
+
+.footer_right .footer_icon:hover {
     color: #92b84b;
+    transition: 0.2s;
 }

@@ -215,8 +215,15 @@
     border: none !important;
 }
 
+#geocoder_start .suggestions {
+    top: calc(100% + 80px) !important;
+}
+
 @media screen and (min-width: 950px) {
     .reservation_form_inline {
         flex-direction: row;
+    }
+    #geocoder_start .suggestions {
+        top: calc(100% + 60px) !important;
     }
 }

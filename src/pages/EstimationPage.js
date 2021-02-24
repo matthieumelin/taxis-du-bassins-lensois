@@ -10,8 +10,6 @@ import { faPlus, faMinus, faCar, faMapMarker, faRoad } from '@fortawesome/free-s
 import mapboxgl from 'mapbox-gl';
 import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 
-import * as turf from '@turf/turf'
-
 import axios from 'axios';
 
 import Header from '../components/Header';
@@ -29,7 +27,6 @@ export default function EstimationPage() {
     const [bags, setBags] = useState(0);
     const [dateTime, setDateTime] = useState(new Date());
     const [roundTrip, setRoundTrip] = useState(true);
-    const [waypoints, setWaypoints] = useState([]);
     const [price, setPrice] = useState(0.00);
     const [submitted, setSubmitted] = useState(false);
     const pricesType = [
@@ -78,6 +75,8 @@ export default function EstimationPage() {
             setKm(0.00);
             setPrice(0.00);
             setSubmitted(false);
+            setPassengers(1);
+            setBags(0);
             setGeocoderStartLngLat({ longitude: 0, latitude: 0 });
         });
 
@@ -89,11 +88,9 @@ export default function EstimationPage() {
             setKm(0.00);
             setPrice(0.00);
             setSubmitted(false);
-            setGeocoderEndLngLat(
-                {
-                    longitude: 0,
-                    latitude: 0,
-                });
+            setPassengers(1);
+            setBags(0);
+            setGeocoderEndLngLat({ longitude: 0, latitude: 0 });
         });
 
         // check if all geocoders is not created
@@ -103,6 +100,19 @@ export default function EstimationPage() {
         // add controls to map
         map.addControl(new mapboxgl.NavigationControl());
     }, []);
+    
+    const requestUrl = `https://api.mapbox.com/directions/v5/mapbox/driving/${geocoderStartLngLat['longitude']},${geocoderStartLngLat['latitude']};${geocoderEndLngLat['longitude']},${geocoderEndLngLat['latitude']}?access_token=pk.eyJ1IjoibWF0dGhpZXVtZWxpbiIsImEiOiJja2sxbTFscTIwc3ZsMnBydXhpYjFwY3JyIn0.9uiKO1Vsqo32x8gOgmfjHg`;
+
+    useEffect(() => {
+        async function fetchData() {
+            const request = await axios.get(requestUrl);
+            const km = setKm((request.data.routes[0].distance / 1000).toFixed([2]));
+    
+            return km;
+        }
+    
+        fetchData();
+    }, [requestUrl])
 
     // functions passengers
     const addPassenger = (event) => {
@@ -132,13 +142,6 @@ export default function EstimationPage() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-
-        // fetch mapbox directions api
-        axios.get(`https://api.mapbox.com/directions/v5/mapbox/driving/${geocoderStartLngLat['longitude']},${geocoderStartLngLat['latitude']};${geocoderEndLngLat['longitude']},${geocoderEndLngLat['latitude']}?access_token=pk.eyJ1IjoibWF0dGhpZXVtZWxpbiIsImEiOiJja2sxbTFscTIwc3ZsMnBydXhpYjFwY3JyIn0.9uiKO1Vsqo32x8gOgmfjHg`)
-            .then((result) => {
-                setWaypoints(result.data.waypoints);
-                setKm((result.data.routes[0].distance / 1000).toFixed([2]));
-            });
 
         // initialize local variables
         const holyDates = [
@@ -218,7 +221,8 @@ export default function EstimationPage() {
                             <h2 className="reservation_header_title">Faire une estimation</h2>
                         </div>
 
-                        <form onSubmit={handleSubmit} className="reservation_form" noValidate>
+                        <form onSubmit={handleSubmit}
+                            className="reservation_form" noValidate>
                             <div className="reservation_form_group">
                                 <FontAwesomeIcon icon={faCar} className="reservation_icon" /><div id="geocoder_start"></div>
                             </div>
@@ -260,7 +264,8 @@ export default function EstimationPage() {
                                 />
                             </div>
                             <div className="reservation_form_group">
-                                <button type="submit" className="button button_submit">Avoir une estimation</button>
+                                <button type="submit"
+                                    className="button button_submit">Avoir une estimation</button>
                             </div>
 
                             {submitted ?

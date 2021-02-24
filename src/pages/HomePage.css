@@ -82,7 +82,8 @@
 
 .services_board {
     text-align: center;
-    margin: 30px;
+    margin: 80px;
+    max-height: 100px;
 }
 
 .services_board_title {
@@ -159,5 +160,6 @@
     }
     .services_board {
         width: 50%;
+        margin: 30px;
     }
 }

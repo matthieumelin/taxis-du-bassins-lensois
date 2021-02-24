@@ -50,25 +50,25 @@
         .navbar .dropdown:hover .dropdown_menu {
             display: block;
             list-style: none;
-            padding: 0;
             text-align: center;
+            padding: 10px 0;
         }
         
         .navbar .dropdown_link {
             text-decoration: none;
+            color: #fff;
         }
         
         .navbar .dropdown_menu {
             display: none;
-            position: absolute;
-            background-color: #f1f1f1;
+            background-color: #80A142;
             min-width: 160px;
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
             z-index: 1;
-            left: 20px;
-            right: 20px;
             text-align: center;
             transition: 0.2s;
+            left: 0;
+            right: 0;
         }
         
         .navbar .navbar_logo {
@@ -156,8 +156,18 @@
         }
         
         @media (min-width: 1130px) {
-            .navbar .dropdown_menu {
-                width: 28.33%;
+            .navbar .dropdown:hover .dropdown_menu {
+                position: absolute;
+                display: flex;
+                padding: 20px 0;
+                list-style: none;
+                justify-content: center;
+            }
+            .navbar .dropdown {
+                position: unset;
+            }
+            .navbar .dropdown_item {
+                margin: 0 10px;
             }
             .navbar .navbar_logo {
                 padding: 15px 20px;

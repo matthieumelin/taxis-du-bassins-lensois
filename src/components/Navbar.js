@@ -14,16 +14,31 @@ export default function Navbar() {
             <ul className="navbar_links">
                 <li className="navbar_item"><Link to="/" className="navbar_link">Taxis</Link></li>
                 <div className="dropdown">
-                    <li className="navbar_item dropbtn"><Link to="#" className="navbar_link">Services <FontAwesomeIcon icon={faArrowDown} /></Link></li>
+                    <li className="navbar_item button_drop"><Link to="#" className="navbar_link">Services <FontAwesomeIcon icon={faArrowDown} /></Link></li>
                     <ul className="dropdown_menu">
                         <li className="dropdown_item">
-                            <Link to="#" className="dropdown_link">Link 1</Link>
+                            <Link to="/services/served" className="dropdown_link">Zone desservie</Link>
                         </li>
                         <li className="dropdown_item">
-                            <Link to="#" className="dropdown_link">Link 2</Link>
+                            <Link to="/services/stations-airports" className="dropdown_link">Gares et aéroports</Link>
                         </li>
                         <li className="dropdown_item">
-                            <Link to="#" className="dropdown_link">Link 3</Link>
+                            <Link to="/services/private" className="dropdown_link">Transports privés</Link>
+                        </li>
+                        <li className="dropdown_item">
+                            <Link to="/services/pro" className="dropdown_link">Transports professionnels</Link>
+                        </li>
+                        <li className="dropdown_item">
+                            <Link to="/services/school" className="dropdown_link">Transports scolaires</Link>
+                        </li>
+                        <li className="dropdown_item">
+                            <Link to="/services/tourism" className="dropdown_link">Tourisme</Link>
+                        </li>
+                        <li className="dropdown_item">
+                            <Link to="/services/assistance" className="dropdown_link">Assistance</Link>
+                        </li>
+                        <li className="dropdown_item">
+                            <Link to="/services/transfert" className="dropdown_link">Transfert</Link>
                         </li>
                     </ul>
                 </div>
