@@ -106,7 +106,7 @@ export default function EstimationPage() {
     useEffect(() => {
         async function fetchData() {
             const request = await axios.get(requestUrl);
-            const km = setKm((request.data.routes[0].distance / 1000).toFixed([2]));
+            const km = setKm((request.data.routes[0].distance / 1000).toFixed([1]));
     
             return km;
         }
