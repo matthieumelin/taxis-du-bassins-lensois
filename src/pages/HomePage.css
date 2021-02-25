@@ -1,165 +1,195 @@
-.section_header_title {
-    text-align: center;
-}
-
-.section_header_description {
-    text-align: center;
-    color: #A7A7A7;
-}
-
-
-/* How section */
-
-.section_how {
-    margin: 50px auto;
-    width: 90%;
-}
-
-.how {
-    text-align: center;
-    margin: 30px;
-}
-
-.how_title {
-    margin-top: 20px;
-}
-
-.how_icon {
-    color: #80A142;
-    font-size: 5rem;
-}
-
-.how_description {
-    color: #A7A7A7;
-}
-
-
-/* Why us section */
-
-.section_why_us {
-    background-image: url('../images/why_us_background.jpg');
-    background-size: cover;
-    padding: 20px;
-    margin-top: 50px;
-}
-
-.section_why_us .section_header_title {
-    color: #fff;
-    margin: 20px 0 0;
-}
-
-.section_why_us .section_content {
-    margin: 0 auto;
-    width: 90%;
-}
-
-.why_us {
-    margin-top: 30px;
-}
-
-.why_us_icon {
-    color: #fff;
-    font-size: 5rem;
-}
-
-.why_us_title {
-    color: #80A142;
-    margin: 20px 0;
-}
-
-.why_us_description {
-    color: #fff;
-    margin: 0;
-}
-
-
-/* services_board section */
-
-.section_services_board {
-    margin: 50px auto;
-    width: 90%;
-}
-
-.services_board {
-    text-align: center;
-    margin: 80px;
-    max-height: 100px;
-}
-
-.services_board_title {
-    margin-top: 20px;
-}
-
-.services_board_icon {
-    color: #fff;
-    background-color: #80A142;
-    font-size: 3rem;
-    border-radius: 100%;
-    padding: 20px 30px;
-    transition: 0.2s;
-}
-
-.services_board_icon:hover {
-    font-size: 3.5rem;
-    transition: 0.2s;
-}
-
-.services_board_description {
-    color: #A7A7A7;
-}
-
-.services_board_link {
-    text-decoration: none;
-    color: #80A142;
-}
-
-
-/* Pub section */
-
-.section_pub {
-    margin: 50px auto;
-    width: 90%;
-}
-
-.pub_image {
-    max-width: 100%;
-    display: block;
-    margin: 0 auto;
-    box-shadow: 10px 10px 60px rgb(0 0 0 / 20%);
-    transition: 0.2s;
-    border-radius: 5px;
-}
-
-.pub_image:hover {
-    box-shadow: 10px 10px 60px rgb(0 0 0 / 40%);
-    transition: 0.2s;
-}
-
-.section_separator {
-    width: 50%;
-}
-
-@media screen and (min-width: 950px) {
-    .section_how .section_content {
-        display: grid;
-        grid-template-columns: repeat(2, 500px);
-        justify-content: center;
+    .section_header_title {
+        text-align: center;
     }
-    .section_why_us .section_content {
-        display: grid;
-        grid-template-columns: repeat(2, 500px);
-        justify-content: center;
+    
+    .section_header_description {
+        text-align: center;
+        color: #A7A7A7;
     }
-    .why_us {
+    /* How section */
+    
+    .section_how {
+        margin: 50px auto;
+        width: 90%;
+    }
+    
+    .how {
         text-align: center;
         margin: 30px;
     }
-    .section_services_board .section_content {
+    
+    .how_title {
+        margin-top: 20px;
+        font-weight: bold;
+    }
+    
+    .how_icon {
+        color: #80A142;
+        font-size: 5rem;
+    }
+    
+    .how_description {
+        color: #A7A7A7;
+    }
+    /* Why us section */
+    
+    .section_why_us {
+        background-image: url('../images/why_us_background.jpg');
+        background-size: cover;
+        padding: 20px;
+        margin-top: 50px;
+    }
+    
+    .section_why_us .section_header_title {
+        color: #fff;
+        margin: 20px 0 0;
+    }
+    
+    .section_why_us .section_content {
+        margin: 0 auto;
+        width: 90%;
+    }
+    
+    .why_us {
+        margin-top: 30px;
+    }
+    
+    .why_us_icon {
+        color: #fff;
+        font-size: 5rem;
+    }
+    
+    .why_us_title {
+        color: #80A142;
+        margin: 20px 0;
+        font-weight: bold;
+    }
+    
+    .why_us_description {
+        color: #fff;
+        margin: 0;
+    }
+    /* services_board section */
+    
+    .section_services_board {
+        margin: 50px auto;
+        width: 90%;
+    }
+    
+    .services_board {
+        text-align: center;
+        margin: 80px;
+    }
+    
+    .services_board_title {
+        margin-top: 20px;
+        font-weight: bold;
+    }
+    
+    .services_board_icon {
+        color: #fff;
+        background-color: #80A142;
+        font-size: 3rem;
+        border-radius: 100%;
+        padding: 20px 30px;
+        transition: 0.2s;
+    }
+    
+    .services_board_icon:hover {
+        font-size: 3.5rem;
+        transition: 0.2s;
+    }
+    
+    .services_board_description {
+        color: #A7A7A7;
+    }
+    
+    .services_board_link {
+        text-decoration: none;
+        color: #80A142;
+    }
+    
+    .services_board_content {
         display: flex;
         justify-content: center;
     }
-    .services_board {
-        width: 50%;
-        margin: 30px;
+    
+    .services_board_menu {
+        padding: 0;
+        list-style: none;
     }
-}
+    /* Pub section */
+    
+    .section_pub {
+        margin: 100px auto;
+        width: 90%;
+    }
+    
+    .section_pub .section_content {
+        margin: 50px 0;
+    }
+    
+    .pub_image {
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+        box-shadow: 10px 10px 60px rgb(0 0 0 / 20%);
+        transition: 0.2s;
+        border-radius: 5px;
+    }
+    
+    .pub_image:hover {
+        box-shadow: 10px 10px 60px rgb(0 0 0 / 40%);
+        transition: 0.2s;
+    }
+    
+    .section_separator {
+        width: 50%;
+    }
+    
+    @media screen and (min-width: 950px) {
+        .section_how .section_header_title {
+            margin: 50px 0;
+        }
+        .section_how .section_content {
+            display: grid;
+            grid-template-columns: repeat(2, 500px);
+            justify-content: center;
+        }
+        .section_services_board .section_content {
+            padding: 50px 0;
+        }
+        .section_header_title {
+            font-size: 2rem;
+        }
+        .how_title,
+        .why_us_title,
+        .services_board_title {
+            font-size: 1.5rem;
+        }
+        .how_description,
+        .why_us_description {
+            font-size: 1.2rem;
+        }
+        .section_why_us .section_content {
+            display: grid;
+            grid-template-columns: repeat(2, 500px);
+            justify-content: center;
+        }
+        .why_us {
+            text-align: center;
+            margin: 30px;
+        }
+        .section_services_board .section_content {
+            display: flex;
+            justify-content: center;
+        }
+        .services_board {
+            width: 50%;
+            margin: 30px;
+        }
+        .services_board_menu_item {
+            display: flex;
+            align-items: center;
+        }
+    }

@@ -204,6 +204,7 @@
 .mapboxgl-ctrl-geocoder--input {
     outline: none !important;
     z-index: 30 !important;
+    font-size: 1rem;
 }
 
 .mapboxgl-ctrl-logo,

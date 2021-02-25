@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCarAlt, faClock, faShare, faShieldAlt, faRoad, faPhone, faClipboard, faSmile, faChild, faBolt, faTint } from '@fortawesome/free-solid-svg-icons';
+import { faCarAlt, faClock, faShare, faShieldAlt, faRoad, faPhone, faClipboard, faSmile, faChild, faBolt, faTint, faBriefcase } from '@fortawesome/free-solid-svg-icons';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -17,6 +17,17 @@ export default function HomePage() {
             </Helmet>
 
             <Header />
+
+            <section className="section section_pub">
+                <div className="section_header">
+                    <h1 className="section_header_title">Remise -15%</h1>
+                    <p className="section_header_description">Profitez de -15% de remise sur présentation de notre publicité.</p>
+                </div>
+
+                <div className="section_content">
+                    <img src="images/pub.jpg" alt="Publicité" className="pub_image" />
+                </div>
+            </section>
 
             <section className="section section_how">
                 <div className="section_header">
@@ -82,35 +93,22 @@ export default function HomePage() {
                     <p className="section_header_description">
                         Notre compagnie de transport met à votre disposition une large gamme de véhicules haut-de-gamme pouvant accueillir de 1 à 7 passagers.
                         Nos véhicules ont également un coffre spacieux pour prendre l’ensemble de vos bagages et effets personnels.
-                        Vous bénéficierez du meilleur service avec un tarif conventionné. 
-                        Nos véhicules sont également récents, bien entretenus, régulièrement contrôlés et avec un habitacle toujours propre et nettoyé. 
+                        Vous bénéficierez du meilleur service avec un tarif conventionné.
+                        Nos véhicules sont également récents, bien entretenus, régulièrement contrôlés et avec un habitacle toujours propre et nettoyé.
                         Nous prenons toutes les mesures possibles pour que vous arriviez à destination sans aucun aléa.</p>
                 </div>
 
                 <div className="section_content">
                     <div className="services_board">
-                        <FontAwesomeIcon icon={faTint} className="services_board_icon" />
-                        <div className="services_board_title">Eau</div>
+                        <FontAwesomeIcon icon={faBriefcase} className="services_board_icon" />
+                        <div className="services_board_title">Equipements</div>
+                        <div className="services_board_content">
+                            <ul className="services_board_menu">
+                                <li className="services_board_menu_item">● Siège enfants</li>
+                                <li className="services_board_menu_item">● Chargeurs</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div className="services_board">
-                        <FontAwesomeIcon icon={faBolt} className="services_board_icon" />
-                        <div className="services_board_title">Chargeurs</div>
-                    </div>
-                    <div className="services_board">
-                        <FontAwesomeIcon icon={faChild} className="services_board_icon" />
-                        <div className="services_board_title">Siège enfants</div>
-                    </div>
-                </div>
-            </section>
-
-            <section className="section section_pub">
-                <div className="section_header">
-                    <h1 className="section_header_title">Remise -15%</h1>
-                    <p className="section_header_description">Profitez de -15% de remise sur présentation de notre publicité.</p>
-                </div>
-
-                <div className="section_content">
-                    <img src="images/pub.jpg" alt="Publicité" className="pub_image" />
                 </div>
             </section>
 

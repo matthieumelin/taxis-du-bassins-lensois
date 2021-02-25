@@ -16,18 +16,22 @@
 }
 
 .header_description {
+    font-size: 18px;
+}
+
+.header_description {
     margin: 0;
     color: #fff;
 }
 
 @media screen and (min-width: 950px) {
     .header_content {
-        padding: 100px;
+        padding: 200px 100px;
     }
     .header_title {
-        font-size: 2.5rem;
+        font-size: 4rem;
     }
     .header_description {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 }

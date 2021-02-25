@@ -7,6 +7,10 @@
     width: 88%;
 }
 
+.form_contact .button {
+    font-size: 18px;
+}
+
 .form_group {
     margin: 20px 0;
 }
@@ -17,6 +21,7 @@
     border-radius: 2px;
     width: 100%;
     outline: none;
+    font-size: 18px;
 }
 
 @media screen and (min-width: 950px) {

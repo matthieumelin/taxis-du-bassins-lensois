@@ -30,7 +30,7 @@ export default function ServicesPage() {
                                 <div className="service_texts">
                                     <p className="service_text">
                                         A partir de Méricourt ou Lens nous desservons l’ensemble de la région Hauts-de-France.
-                                        En effet TAXIS DU BASSIN LENSOIS est présent dans les grandes villes telles que :
+                                        En effet <strong>TAXIS DU BASSIN LENSOIS</strong> est présent dans les grandes villes telles que :
                                         Lens, Dunkerque, Calais, Cambrai, Arras, Béthune, Lille, Roubaix, Tourcoing, Wattrelos,
                                         Douai, Valenciennes, dans chacune de leurs agglomérations.
                                         A ces villes, il faut ajouter les grandes gares et aéroports du Nord telles que la Gare de
@@ -39,7 +39,7 @@ export default function ServicesPage() {
                                         Charleroi ou encore de Liège. Nous pouvons aussi passer avec vous l’Eurostar et
                                         desservir les aéroports de Londres tel que celui de Heathrow ou encore Gatwick et
                                         Santed.
-                                        Taxis du Bassin Lensois effectue des déplacements régulierement vers la région
+                                        <strong>Taxis du Bassin Lensois</strong> effectue des déplacements régulierement vers la région
                                         parisienne et notamment les Aéroports de Roissy Charles de Gaulle ou Orly. Notre société
                                         n’a pas de limite de déplacement en France et en Europe et nos tarifs peuvent être ajustés
                                         pour des destinations comme Francfort, Berlin, Genève, Rome, Barcelone ou encore
@@ -183,9 +183,6 @@ export default function ServicesPage() {
                                                     vos appareils...).Réservez vite votre taxi sur le site, et <strong>découvrez le Pas-de-Calais</strong> et ses
                                                     richesses avec notre chauffeur.
                                                     </p>
-                                                        <p className="service_text">
-                                                            Notre maître-mot : ponctualité et discrétion.
-                                                        </p>
                                                     </div>
                                                 </div>
                                             </div>

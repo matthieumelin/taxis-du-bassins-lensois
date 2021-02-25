@@ -13,8 +13,7 @@ export default function Navbar() {
             <label className="navbar_label" htmlFor="navbar_toggle"><span className="navicon"></span></label>
             <ul className="navbar_links">
                 <li className="navbar_item"><Link to="/" className="navbar_link">Taxis</Link></li>
-                <div className="dropdown">
-                    <li className="navbar_item button_drop"><Link to="#" className="navbar_link">Services <FontAwesomeIcon icon={faArrowDown} /></Link></li>
+                    <li className="navbar_item"><Link to="#" className="navbar_link dropdown button_drop">Services <FontAwesomeIcon icon={faArrowDown} /></Link></li>
                     <ul className="dropdown_menu">
                         <li className="dropdown_item">
                             <Link to="/services/served" className="dropdown_link">Zone desservie</Link>
@@ -41,7 +40,6 @@ export default function Navbar() {
                             <Link to="/services/transfert" className="dropdown_link">Transfert</Link>
                         </li>
                     </ul>
-                </div>
                 <li className="navbar_item"><Link to="/faq" className="navbar_link">F.A.Q</Link></li>
                 <li className="navbar_item"><Link to="/contact" className="navbar_link">Nous contacter</Link></li>
                 <div className="navbar_right">
