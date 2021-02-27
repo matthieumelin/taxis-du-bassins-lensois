@@ -91,12 +91,12 @@
         background-color: #80A142;
         font-size: 3rem;
         border-radius: 100%;
-        padding: 20px 30px;
+        padding: 20px;
         transition: 0.2s;
     }
     
     .services_board_icon:hover {
-        font-size: 3.5rem;
+        background-color: #6e8b38;
         transition: 0.2s;
     }
     
@@ -117,6 +117,11 @@
     .services_board_menu {
         padding: 0;
         list-style: none;
+    }
+    
+    .services_board_menu_item {
+        display: flex;
+        align-items: center;
     }
     /* Pub section */
     
@@ -187,9 +192,5 @@
         .services_board {
             width: 50%;
             margin: 30px;
-        }
-        .services_board_menu_item {
-            display: flex;
-            align-items: center;
         }
     }

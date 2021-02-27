@@ -30,10 +30,10 @@ export default function EstimationPage() {
     const [price, setPrice] = useState(0.00);
     const [submitted, setSubmitted] = useState(false);
     const pricesType = [
-        1.02,
-        1.30,
         2.04,
-        2.60
+        2.60,
+        1.02,
+        1.30
     ];
 
     mapboxgl.accessToken = 'pk.eyJ1IjoibWF0dGhpZXVtZWxpbiIsImEiOiJja2sxbTFscTIwc3ZsMnBydXhpYjFwY3JyIn0.9uiKO1Vsqo32x8gOgmfjHg';
@@ -112,7 +112,7 @@ export default function EstimationPage() {
         }
     
         fetchData();
-    }, [requestUrl])
+    }, [requestUrl]);
 
     // functions passengers
     const addPassenger = (event) => {
@@ -179,16 +179,28 @@ export default function EstimationPage() {
         }
 
         // check passengers amount and calcul the price
-        if (passengers > 4) {
-            if (passengers === 5) price = price * km + 2.50;
-            else if (passengers === 6) price = price * km + 5.00;
-            else price = price * km + 7.50;
+        let priceKmMul = price * km;
+
+        // check kilometers
+        if (km < 2.00) {
+            priceKmMul = 0;
         } else {
-            price = price * km;
+            priceKmMul = price * (km - 2); 
+        }
+
+        if (passengers > 4) {
+            if (passengers === 5) price = priceKmMul + 2.50;
+            else if (passengers === 6) price = priceKmMul + 5.00;
+            else price = priceKmMul + 7.50;
+        } else {
+            price = priceKmMul;
         }
 
         // check bags amount and add to final price
         if (bags >= 4) price = price + 2.00;
+
+        // final price
+        price = price + 7.30;
 
         // set price
         setPrice(price.toFixed([2]));

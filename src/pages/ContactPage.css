@@ -11,17 +11,27 @@
     font-size: 18px;
 }
 
-.form_group {
+.form_contact .form_group {
     margin: 20px 0;
 }
 
-.form_input {
+.form_contact .form_input {
     padding: 20px;
     border: 1px solid #C4C4C4;
     border-radius: 2px;
     width: 100%;
     outline: none;
     font-size: 18px;
+    transition: .2s;
+    resize: none;
+}
+
+.form_contact .form_input:focus {
+    border-left: 3px solid #80A142;
+    border-top: 1px solid #80A142;
+    border-bottom: 1px solid #80A142;
+    border-right: 1px solid #80A142;
+    transition: .2s;
 }
 
 @media screen and (min-width: 950px) {

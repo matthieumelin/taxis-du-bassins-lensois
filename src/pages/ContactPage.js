@@ -108,8 +108,6 @@ export default function ContactPage() {
                             <div className="form_group">
                                 <textarea name="message"
                                     id="message"
-                                    cols="30"
-                                    rows="10"
                                     placeholder="Votre message.."
                                     onChange={(event) => { setMessage(event.target.value) }}
                                     className="form_input"

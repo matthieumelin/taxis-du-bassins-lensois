@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCarAlt, faClock, faShare, faShieldAlt, faRoad, faPhone, faClipboard, faSmile, faChild, faBolt, faTint, faBriefcase } from '@fortawesome/free-solid-svg-icons';
+import { faCarAlt, faClock, faShare, faShieldAlt, faRoad, faPhone, faClipboard, faSmile, faChild, faBolt, faTint, faBriefcase, faBreadSlice, faCocktail, faCandyCane, faVirus, faMask, faHeadSideMask } from '@fortawesome/free-solid-svg-icons';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -104,8 +104,33 @@ export default function HomePage() {
                         <div className="services_board_title">Equipements</div>
                         <div className="services_board_content">
                             <ul className="services_board_menu">
-                                <li className="services_board_menu_item">● Siège enfants</li>
                                 <li className="services_board_menu_item">● Chargeurs</li>
+                                <li className="services_board_menu_item">● Tablettes</li>
+                                <li className="services_board_menu_item">● Wi-Fi sur demande</li>
+                                <li className="services_board_menu_item">● Climatisation</li>
+                                <li className="services_board_menu_item">● Siège enfants</li>
+                                <li className="services_board_menu_item">● Dossier réglable</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div className="services_board">
+                        <FontAwesomeIcon icon={faCandyCane} className="services_board_icon" />
+                        <div className="services_board_title">Alimentations</div>
+                        <div className="services_board_content">
+                            <ul className="services_board_menu">
+                                <li className="services_board_menu_item">● Rafraîchissement</li>
+                                <li className="services_board_menu_item">● Confiseries</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div className="services_board">
+                        <FontAwesomeIcon icon={faHeadSideMask} className="services_board_icon" />
+                        <div className="services_board_title">Sanitaire</div>
+                        <div className="services_board_content">
+                            <ul className="services_board_menu">
+                                <li className="services_board_menu_item">● Cloison de séparation</li>
+                                <li className="services_board_menu_item">● Gel hydroalcoolique</li>
+                                <li className="services_board_menu_item">● Masques</li>
                             </ul>
                         </div>
                     </div>
